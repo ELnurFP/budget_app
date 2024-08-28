@@ -26,10 +26,10 @@ class _TransactionListState extends ConsumerState<TransactionList>
     transactions = ref.watch(transactionProvider);
 
     if (transactions.isEmpty) {
-      return const Center(
+      return Center(
         child: Text(
-          'No transactions yet!',
-          style: TextStyle(
+          'No transactions yet!'.staticallyTyped(),
+          style: const TextStyle(
             color: activeRed,
             fontSize: 25,
             fontWeight: FontWeight.w400,

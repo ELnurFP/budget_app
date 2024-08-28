@@ -28,7 +28,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         if (state == CyclePhase.root) {
           context.goNamed(Routes.root.name);
         } else if (state == CyclePhase.auth) {
-          // gp to auth
+          // go to auth
         }
       },
     );

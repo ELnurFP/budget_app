@@ -68,8 +68,7 @@ class HomePage extends StatelessWidget {
         ),
       ],
       title: const HomeProfileCartWidget(),
-      backgroundColor:
-          Colors.transparent, // Make AppBar background transparent if needed
+      backgroundColor: Colors.transparent,
       elevation: 0, // Remove shadow if not needed
     );
   }

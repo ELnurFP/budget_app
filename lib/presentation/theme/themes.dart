@@ -45,7 +45,7 @@ class Themes {
         ),
         hintStyle: const TextStyle(color: grey),
         filled: true,
-        fillColor: Colors.white,
+        fillColor: primary,
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.all(

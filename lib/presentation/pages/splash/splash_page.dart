@@ -33,8 +33,6 @@ class _SplashPageState extends ConsumerState<SplashPage> {
       },
     );
 
-    return const Scaffold(
-      backgroundColor: Colors.white,
-    );
+    return const Scaffold();
   }
 }

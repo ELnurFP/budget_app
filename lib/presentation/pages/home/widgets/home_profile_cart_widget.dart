@@ -19,7 +19,6 @@ class HomeProfileCartWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Profile Image
           ClipOval(
             child: CachedNetworkImage(
               imageUrl: AppValues.profileUrl,

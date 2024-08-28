@@ -1,0 +1,68 @@
+name: home_budget_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.5.1
+  flutter_svg: ^2.0.10+1
+  fl_chart: ^0.69.0
+  go_router: ^14.2.7
+  flutter_native_splash: ^2.4.1
+  shared_preferences: ^2.3.2
+  flutter_secure_storage: ^9.2.2
+  gap: ^3.0.1
+  intl: ^0.19.0
+  cached_network_image: ^3.4.1
+  flutter_slidable: ^3.1.1
+  fluttertoast: ^8.2.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/vectors/
+
+  fonts:
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans/DMSans-Black.ttf
+        - asset: assets/fonts/DMSans/DMSans-Bold.ttf
+        - asset: assets/fonts/DMSans/DMSans-ExtraBold.ttf
+        - asset: assets/fonts/DMSans/DMSans-ExtraLight.ttf
+        - asset: assets/fonts/DMSans/DMSans-Light.ttf
+        - asset: assets/fonts/DMSans/DMSans-Medium.ttf
+        - asset: assets/fonts/DMSans/DMSans-Regular.ttf
+        - asset: assets/fonts/DMSans/DMSans-SemiBold.ttf
+        - asset: assets/fonts/DMSans/DMSans-Thin.ttf
+    - family: Epilogue
+      fonts:
+        - asset: assets/fonts/Epilogue/Epilogue-Black.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Bold.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-ExtraBold.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-ExtraLight.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Light.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Medium.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Regular.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-SemiBold.ttf
+        - asset: assets/fonts/Epilogue/Epilogue-Thin.ttf
+

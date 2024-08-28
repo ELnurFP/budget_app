@@ -142,9 +142,13 @@ class _TransactionItemWidgetState extends State<TransactionItemWidget>
   }
 
   void _handleAction(String action) {
-    _animationController.reverse();
-    _slidableController.close();
-    showStyledSnackbar(message: action);
+    showStyledSnackbar(
+      message: action,
+      onDismiss: () {
+        _animationController.reverse();
+        _slidableController.close();
+      },
+    );
   }
 
   Widget _buildTransactionCard(BuildContext context) {

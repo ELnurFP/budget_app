@@ -40,13 +40,28 @@ FutureOr<String?> handleRedirect(
 Future<void> showStyledSnackbar({
   required String message,
   bool positive = true,
+  required VoidCallback onDismiss,
 }) async {
   final fToast = FToast();
   fToast.init(ctx!);
-  Widget toast = RippleToast(message: message, positive: positive);
+  Widget toast = RippleToast(
+      message: message,
+      positive: positive,
+      onDismiss: () {
+        fToast.removeQueuedCustomToasts();
+        onDismiss.call();
+      });
 
   fToast.showToast(
       child: toast,
+      positionedToastBuilder: (context, child) {
+        return Positioned(
+          top: 200,
+          left: 0,
+          right: 0,
+          child: child,
+        );
+      },
       gravity: ToastGravity.TOP,
       toastDuration: const Duration(seconds: 3));
 }

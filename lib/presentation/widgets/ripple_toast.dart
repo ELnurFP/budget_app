@@ -5,8 +5,13 @@ import 'package:home_budget_app/budget_app.dart';
 class RippleToast extends StatefulWidget {
   final String message;
   final bool positive;
+  final VoidCallback onDismiss;
 
-  const RippleToast({super.key, required this.message, this.positive = true});
+  const RippleToast(
+      {super.key,
+      required this.message,
+      this.positive = true,
+      required this.onDismiss});
 
   @override
   RippleToastState createState() => RippleToastState();
@@ -155,6 +160,7 @@ class RippleToastState extends State<RippleToast>
     secondRippleController.dispose();
     thirdRippleController.dispose();
     initialCircleController.dispose();
+
     super.dispose();
   }
 
@@ -175,7 +181,7 @@ class RippleToastState extends State<RippleToast>
       Animation<double> radiusAnimation, Animation<double> opacityAnimation) {
     return Container(
       width: radiusAnimation.value * 2,
-      height: (radiusAnimation.value * 2) / 4,
+      height: (radiusAnimation.value * 2) / 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: (widget.positive ? orange.withOpacity(.5) : Colors.red)
@@ -201,6 +207,7 @@ class RippleToastState extends State<RippleToast>
               vertical: initialCircleWidthAnimation.value > 200 ? 16 : 0),
           child: Row(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               if (initialCircleWidthAnimation.value > 200)
                 SvgPicture.asset(
@@ -240,6 +247,11 @@ class RippleToastState extends State<RippleToast>
                       ],
                     ),
                   ),
+                ),
+              if (initialCircleWidthAnimation.value > 200)
+                InkWell(
+                  onTap: widget.onDismiss,
+                  child: const Icon(Icons.close, color: inActiveRed),
                 ),
             ],
           ),

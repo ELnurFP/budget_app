@@ -1,6 +1,6 @@
 # home_budget_app
 
-A new Flutter project.
+https://www.loom.com/share/d95b3988bb494e45b9fbfda652aba56a?sid=08df4b6f-8638-4b46-98cd-a474b9aada7c
 
 ## Getting Started
 

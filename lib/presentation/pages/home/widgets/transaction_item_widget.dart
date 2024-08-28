@@ -98,7 +98,7 @@ class _TransactionItemWidgetState extends State<TransactionItemWidget>
             color: activeButton,
             borderRadius: BorderRadius.circular(40),
           ),
-          child: _animation.value > 160
+          child: _animation.value > 180
               ? _buildActionButtons()
               : _buildDefaultButton(),
         ),
@@ -122,9 +122,13 @@ class _TransactionItemWidgetState extends State<TransactionItemWidget>
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         _buildIcon(Icons.send, Colors.white, () => _handleAction('Send')),
+        8.gap,
         _buildVerticalDivider(),
+        8.gap,
         _buildIcon(Icons.edit, Colors.white, () => _handleAction('Edit')),
+        8.gap,
         _buildVerticalDivider(),
+        8.gap,
         _buildIcon(Icons.delete, Colors.white, () {
           widget.onDelete.call();
           _animationController.reverse();

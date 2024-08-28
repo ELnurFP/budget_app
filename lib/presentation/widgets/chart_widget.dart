@@ -18,6 +18,8 @@ class ChartWidget extends ConsumerWidget {
         child: Stack(
           children: [
             BarChart(
+              swapAnimationCurve: Curves.easeInOut,
+              swapAnimationDuration: const Duration(milliseconds: 250),
               BarChartData(
                 alignment: BarChartAlignment.spaceAround,
                 maxY: 30,

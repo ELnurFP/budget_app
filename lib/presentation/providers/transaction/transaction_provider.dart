@@ -31,7 +31,22 @@ class TransactionNotifier extends StateNotifier<List<TransactionItem>> {
         time: '14:56',
         amount: 52.39,
       ),
-      // Add more dummy data as needed
+      TransactionItem(
+        icon: Icons.local_grocery_store,
+        title: 'Grocery',
+        description: 'Whole Foods Market',
+        address: '270 Greenwich St, New York, NY 10007, USA',
+        time: '16:22',
+        amount: 45.00,
+      ),
+      TransactionItem(
+        icon: Icons.fastfood,
+        title: 'Fastfood',
+        description: 'McDonald\'s',
+        address: '160 Broadway, New York, NY 10038, USA',
+        time: '18:05',
+        amount: 8.50,
+      ),
     ];
   }
 

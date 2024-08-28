@@ -32,7 +32,7 @@ class _TransactionItemWidgetState extends State<TransactionItemWidget>
   void _initializeAnimation() {
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 500),
     );
     _animation =
         Tween<double>(begin: 40.0, end: 200.0).animate(_animationController);
@@ -75,10 +75,13 @@ class _TransactionItemWidgetState extends State<TransactionItemWidget>
       motion: const ScrollMotion(),
       extentRatio: 0.6,
       children: [
-        const Spacer(),
-        AnimatedBuilder(
-          animation: _animationController,
-          builder: (context, child) => _buildAnimatedContainer(),
+        Expanded(
+          child: Center(
+            child: AnimatedBuilder(
+              animation: _animationController,
+              builder: (context, child) => _buildAnimatedContainer(),
+            ),
+          ),
         ),
       ],
     );

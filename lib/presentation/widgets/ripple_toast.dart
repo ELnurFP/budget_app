@@ -213,32 +213,34 @@ class RippleToastState extends State<RippleToast>
               SizedBox(
                 width: initialCircleWidthAnimation.value > 200 ? 12 : 0,
               ),
-              Flexible(
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "You are too close to the daily limit. Only "
-                            .staticallyTyped(),
-                        style: TextStyle(
+              if (initialCircleWidthAnimation.value > 150)
+                Flexible(
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "You are too close to the daily limit. Only "
+                              .staticallyTyped(),
+                          style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: initialCircleWidthAnimation.value > 200
+                                  ? 12
+                                  : 8),
+                        ),
+                        TextSpan(
+                          text: "\$ 5.37 left.".staticallyTyped(),
+                          style: TextStyle(
                             color: Colors.white70,
                             fontSize: initialCircleWidthAnimation.value > 200
                                 ? 12
-                                : 8),
-                      ),
-                      TextSpan(
-                        text: "\$ 5.37 left.".staticallyTyped(),
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontSize:
-                              initialCircleWidthAnimation.value > 200 ? 12 : 8,
-                          fontWeight: FontWeight.bold,
+                                : 8,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         );
